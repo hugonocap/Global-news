@@ -38,8 +38,6 @@ struct HeaderView: View {
             }
             // MARK: Divider
             Divider()
-            
-            Spacer()
         }
     }
 }

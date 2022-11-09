@@ -14,6 +14,7 @@
 		D9D84DDD291C52090008EA3E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D84DDC291C52090008EA3E /* HomeView.swift */; };
 		D9D84DE0291C54840008EA3E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D84DDF291C54840008EA3E /* HeaderView.swift */; };
 		D9D84DE4291C593E0008EA3E /* TrendingTopicsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D84DE3291C593E0008EA3E /* TrendingTopicsItem.swift */; };
+		D9D84DE6291C62190008EA3E /* TrendingTopicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D84DE5291C62190008EA3E /* TrendingTopicsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		D9D84DDC291C52090008EA3E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D9D84DDF291C54840008EA3E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D9D84DE3291C593E0008EA3E /* TrendingTopicsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTopicsItem.swift; sourceTree = "<group>"; };
+		D9D84DE5291C62190008EA3E /* TrendingTopicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTopicsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				D9D84DDC291C52090008EA3E /* HomeView.swift */,
 				D9D84DDF291C54840008EA3E /* HeaderView.swift */,
 				D9D84DE3291C593E0008EA3E /* TrendingTopicsItem.swift */,
+				D9D84DE5291C62190008EA3E /* TrendingTopicsView.swift */,
 				D9D84DDE291C52320008EA3E /* ViewModels */,
 			);
 			path = Views;
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9D84DE4291C593E0008EA3E /* TrendingTopicsItem.swift in Sources */,
+				D9D84DE6291C62190008EA3E /* TrendingTopicsView.swift in Sources */,
 				D9D84DDD291C52090008EA3E /* HomeView.swift in Sources */,
 				D9D84DCA291C51200008EA3E /* ContentView.swift in Sources */,
 				D9D84DC8291C51200008EA3E /* Global_newsApp.swift in Sources */,

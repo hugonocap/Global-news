@@ -9,22 +9,15 @@ import SwiftUI
 
 struct TrendingTopicsItem: View {
     var body: some View {
-        ZStack {
+        ZStack(alignment: .center) {
             
             // MARK: Card image
             Image("indonesia-nature")
                 .resizable()
                 .cornerRadius(10)
-                .frame(maxWidth: .infinity)
+                .scaledToFit()
                 .frame(height: UIScreen.main.bounds.height / 4)
-            
-            // MARK: Blur
-            RoundedRectangle(cornerRadius: 10)
-                .background(.thinMaterial)
-                .opacity(0.15)
-                .frame(maxWidth: .infinity)
-                .frame(height: UIScreen.main.bounds.height / 4)
-            
+                .overlay(
             // MARK: Top buttons
             VStack {
                 HStack(alignment: .bottom, spacing: 12) {
@@ -46,13 +39,14 @@ struct TrendingTopicsItem: View {
                         .fontWeight(.bold)
                         .padding(.vertical, 5)
                         .padding(.horizontal, 10)
-                        .background(.orange)
+                        .background(Color(.systemOrange))
                         .cornerRadius(5)
                     
                     Text("5 tourist attractions that you must visit while in Indonesia")
                         .foregroundColor(.white)
                         .fontWeight(.medium)
                         .font(.headline)
+                        .lineLimit(2)
                     
                     // MARK: Author
                     HStack {
@@ -63,7 +57,8 @@ struct TrendingTopicsItem: View {
                     .font(.footnote)
                 }
             }
-            .padding(.horizontal)
+            .padding()
+            )
         }
     }
 }
