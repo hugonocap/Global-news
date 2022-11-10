@@ -15,6 +15,7 @@ struct HomeView: View {
                         HeaderView()
                         TrendingTopicsView()
                         CategoriesView()
+                        NewsListView()
                     }
                     .edgesIgnoringSafeArea(.top)
                     .padding()
@@ -22,7 +23,7 @@ struct HomeView: View {
                 Spacer()
             }
         }
-        .edgesIgnoringSafeArea(.top)
+        .edgesIgnoringSafeArea([.top, .bottom])
     }
 }
 

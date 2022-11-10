@@ -69,7 +69,7 @@ struct NewsListItemView: View {
         }
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .frame(height: 125)
-        .shadow(radius: 12)
+        .shadow(radius: 5)
     }
 }
 
