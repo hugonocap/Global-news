@@ -8,55 +8,34 @@
 import SwiftUI
 
 struct NewsListItemView: View {
+    var newsComponent: News
     var body: some View {
         ZStack {
             Color(.white)
             
             HStack {
-                Image("friends-hangout")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 130)
-                    .clipped()
+                ImageView(image: newsComponent.image)
                     
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("Travel")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .padding(.vertical, 5)
-                            .padding(.horizontal, 10)
-                            .background(Color(.systemOrange))
-                            .clipShape(RoundedRectangle(cornerRadius: 5))
+                        CategoryView(category: newsComponent.category)
                         
                         Spacer()
                         
-                        HStack {
-                            Image(systemName: "clock")
-                            Text("15:34")
-                        }
-                        .foregroundColor(.gray)
-                        .fontWeight(.light)
+                        UploadTimeView(time: newsComponent.uploadTime)
                     }
                     .font(.footnote)
                     
-                    Text("Take your friends to a new hangout in Jakarta, here's the list!")
-                        .font(.system(size: 14))
-                        .lineLimit(2)
-                        .foregroundColor(.gray)
+                    TitleView(title: newsComponent.title)
                     
                     
                     Spacer()
                     
                     HStack {
-                        Image(systemName: "pencil")
-                        Text("Ikka Damayana")
+                        AuthorView(author: newsComponent.author)
                         Spacer()
                         
-                        HStack {
-                            Image(systemName: "bubble.right.fill")
-                            Text("23")
-                        }
+                        CommentsView(comments: newsComponent.numberOfComments)
                         
                         Image(systemName: "square.and.arrow.up.fill")
                     }
@@ -73,9 +52,73 @@ struct NewsListItemView: View {
     }
 }
 
-struct NewsListItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsListItemView()
-            .padding()
+//struct NewsListItemView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewsListItemView(newsComponent: News)
+//            .padding()
+//    }
+//}
+
+struct ImageView: View {
+    var image: String
+    var body: some View {
+        Image(image)
+            .resizable()
+            .scaledToFill()
+            .frame(width: 130)
+            .clipped()
+    }
+}
+
+struct CategoryView: View {
+    var category: String
+    var body: some View {
+        Text(category)
+            .foregroundColor(.white)
+            .fontWeight(.bold)
+            .padding(.vertical, 5)
+            .padding(.horizontal, 10)
+            .background(Color(.systemOrange))
+            .clipShape(RoundedRectangle(cornerRadius: 5))
+    }
+}
+
+struct UploadTimeView: View {
+    var time: String
+    var body: some View {
+        HStack {
+            Image(systemName: "clock")
+            Text(time)
+        }
+        .foregroundColor(.gray)
+        .fontWeight(.light)
+    }
+}
+
+struct TitleView: View {
+    var title: String
+    var body: some View {
+        Text(title)
+            .font(.system(size: 14))
+            .lineLimit(2)
+            .foregroundColor(.gray)
+    }
+}
+
+struct AuthorView: View {
+    var author: String
+    var body: some View {
+        Image(systemName: "pencil")
+        Text(author)
+    }
+}
+
+struct CommentsView: View {
+    var comments: Int
+    var body: some View {
+        HStack {
+            Image(systemName: "bubble.right.fill")
+            Text("\(comments)")
+        }
     }
 }
