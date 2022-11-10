@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D91DA6A3291CE1D40082921D /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91DA6A2291CE1D40082921D /* CategoriesView.swift */; };
+		D91DA6A5291CE9700082921D /* NewsListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91DA6A4291CE9700082921D /* NewsListItemView.swift */; };
 		D9D84DC8291C51200008EA3E /* Global_newsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D84DC7291C51200008EA3E /* Global_newsApp.swift */; };
 		D9D84DCA291C51200008EA3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D84DC9291C51200008EA3E /* ContentView.swift */; };
 		D9D84DCC291C51210008EA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D84DCB291C51210008EA3E /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		D91DA6A2291CE1D40082921D /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		D91DA6A4291CE9700082921D /* NewsListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListItemView.swift; sourceTree = "<group>"; };
 		D9D84DC4291C51200008EA3E /* Global news.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Global news.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D84DC7291C51200008EA3E /* Global_newsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global_newsApp.swift; sourceTree = "<group>"; };
 		D9D84DC9291C51200008EA3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				D9D84DE5291C62190008EA3E /* TrendingTopicsView.swift */,
 				D9D84DDE291C52320008EA3E /* ViewModels */,
 				D91DA6A2291CE1D40082921D /* CategoriesView.swift */,
+				D91DA6A4291CE9700082921D /* NewsListItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				D91DA6A3291CE1D40082921D /* CategoriesView.swift in Sources */,
 				D9D84DE6291C62190008EA3E /* TrendingTopicsView.swift in Sources */,
 				D9D84DDD291C52090008EA3E /* HomeView.swift in Sources */,
+				D91DA6A5291CE9700082921D /* NewsListItemView.swift in Sources */,
 				D9D84DCA291C51200008EA3E /* ContentView.swift in Sources */,
 				D9D84DC8291C51200008EA3E /* Global_newsApp.swift in Sources */,
 				D9D84DE0291C54840008EA3E /* HeaderView.swift in Sources */,
