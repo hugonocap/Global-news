@@ -39,6 +39,7 @@ struct HeaderView: View {
             // MARK: Divider
             Divider()
         }
+        .padding(.top, UIScreen.main.bounds.height / 15)
     }
 }
 

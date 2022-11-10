@@ -9,12 +9,20 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            HeaderView()
-            TrendingTopicsView()
-            Spacer()
+        ZStack {
+            VStack {
+                ScrollView {
+                        HeaderView()
+                        TrendingTopicsView()
+                        CategoriesView()
+                    }
+                    .edgesIgnoringSafeArea(.top)
+                    .padding()
+                
+                Spacer()
+            }
         }
-        .padding()
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
