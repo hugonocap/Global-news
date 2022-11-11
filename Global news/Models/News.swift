@@ -20,14 +20,14 @@ struct News: Identifiable {
 
 struct NewsList {
     static let allNews = [
-        // MARK: 5 tourist attractions that you must visit while in Indonesia
-        News(image: "5-tourist-attractions-in",
-             title: "5 tourist attractions that you must visit while in Indonesia",
-             category: "Travel",
-             author: "Achmad Alimin",
-             content: "Lorem ispum for now",
-             uploadTime: "15:34",
-             numberOfComments: 23),
+//        // MARK: 5 tourist attractions that you must visit while in Indonesia
+//        News(image: "5-tourist-attractions-in",
+//             title: "5 tourist attractions that you must visit while in Indonesia",
+//             category: "Travel",
+//             author: "Achmad Alimin",
+//             content: "Lorem ispum for now",
+//             uploadTime: "15:34",
+//             numberOfComments: 23),
         // MARK: Take your friends to a new hangout in Jakarta, here's the list!
         News(image: "friends-hangout",
              title: "Take your friends to a new hangout in Jakarta, here's the list!",

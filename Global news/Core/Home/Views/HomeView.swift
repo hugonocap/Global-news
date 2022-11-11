@@ -12,13 +12,16 @@ struct HomeView: View {
         ZStack {
             VStack {
                 ScrollView {
+                    VStack {
                         HeaderView()
                         TrendingTopicsView()
                         CategoriesView()
                         NewsListView()
                     }
+                    .padding(.horizontal)
+                    }
                     .edgesIgnoringSafeArea(.top)
-                    .padding()
+                    
                 
                 Spacer()
             }
