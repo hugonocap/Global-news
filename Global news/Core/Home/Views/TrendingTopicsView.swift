@@ -20,6 +20,7 @@ struct TrendingTopicsView: View {
                     ForEach(0 ..< 4) { _ in
                         TrendingTopicsItem()
                     }
+                    .frame(height: 250)
                 }
                 .padding(.leading)
             }

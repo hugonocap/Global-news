@@ -24,7 +24,7 @@ struct NewsListItemView: View {
                         
                         UploadTimeView(time: newsComponent.uploadTime)
                     }
-                    .font(.footnote)
+                    .font(.caption)
                     
                     TitleView(title: newsComponent.title)
                     

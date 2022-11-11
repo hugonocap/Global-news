@@ -16,6 +16,7 @@ struct TrendingTopicsItem: View {
                 .resizable()
                 .cornerRadius(10)
                 .scaledToFit()
+                .shadow(color: .gray, radius: 8, y: 5)
                 .frame(height: UIScreen.main.bounds.height / 4)
                 .overlay(
             // MARK: Top buttons

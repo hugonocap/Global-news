@@ -29,7 +29,7 @@ struct CategoriesView: View {
                 }
             }
             .foregroundColor(.gray)
-            .padding()
+            .padding([.leading,.bottom,.trailing])
             .padding(.top)
         }
     }
