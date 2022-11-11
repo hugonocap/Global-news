@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TrendingTopicsView: View {
+    var news: [TrendingNews] = TrendingCarousel.allNews
     var body: some View {
         VStack(alignment: .leading) {
             Text("Trending Topics")
@@ -17,8 +18,8 @@ struct TrendingTopicsView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    ForEach(0 ..< 4) { _ in
-                        TrendingTopicsItem()
+                    ForEach(news, id: \.id) { item in
+                        TrendingTopicsItem(newsComponent: item)
                     }
                     .frame(height: 250)
                 }
