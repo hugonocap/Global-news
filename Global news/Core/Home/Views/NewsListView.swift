@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct NewsListView: View {
+    var news: [News] = NewsList.allNews
     var body: some View {
         VStack(spacing: 20) {
-            ForEach(0 ..< 5) { _ in
-                NewsListItemView()
+            ForEach(news, id: \.id) { news in
+                NewsListItemView(newsComponent: news)
             }
         }
     }
