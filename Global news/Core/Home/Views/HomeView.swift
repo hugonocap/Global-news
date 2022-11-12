@@ -9,26 +9,29 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ZStack {
-            VStack {
-                ScrollView(showsIndicators: false) {
-                    VStack {
-                        HeaderView()
-                        TrendingTopicsView()
-                        CategoriesView()
-                        NewsListView()
-                    }
-                    .padding(.horizontal)
+        NavigationView {
+            ZStack {
+                VStack {
+                    ScrollView(showsIndicators: false) {
+                        VStack {
+                            HeaderView()
+                            TrendingTopicsView()
+                            CategoriesView()
+                            NewsListView()
+                        }
+                        .padding(.horizontal)
                     }
                     .edgesIgnoringSafeArea(.top)
-                
-                BottomTabBarView()
                     
-                
-                Spacer()
+                    BottomTabBarView()
+                    
+                    
+                    Spacer()
+                }
             }
+            .edgesIgnoringSafeArea([.top, .bottom])
+            .navigationBarHidden(true)
         }
-        .edgesIgnoringSafeArea([.top, .bottom])
     }
 }
 

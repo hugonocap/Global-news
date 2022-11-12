@@ -10,9 +10,11 @@ import SwiftUI
 struct NewsListView: View {
     var news: [News] = NewsList.allNews
     var body: some View {
-        VStack(spacing: 20) {
-            ForEach(news, id: \.id) { news in
-                NewsListItemView(newsComponent: news)
+            VStack(spacing: 20) {
+                ForEach(news, id: \.id) { news in
+                    NavigationLink(destination: NewsDetailedView()) {
+                        NewsListItemView(newsComponent: news)
+                    }
             }
         }
     }

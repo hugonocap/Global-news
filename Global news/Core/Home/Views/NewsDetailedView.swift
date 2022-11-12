@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NewsDetailedView: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack {
             ZStack {
@@ -89,21 +90,27 @@ struct NewsDetailedView: View {
                     Spacer()
                 }
                 .edgesIgnoringSafeArea(.top)
-                
+                // MARK: Back button
                 VStack {
-                    HStack {
-                        Image(systemName: "arrow.left")
-                            .font(.title2)
-                            .foregroundColor(.black)
-                            .opacity(0.6)
-                        Spacer()
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        HStack {
+                            Image(systemName: "arrow.left")
+                                .font(.title2)
+                                .foregroundColor(.black)
+                                .opacity(0.6)
+                            Spacer()
+                        }
+                        .padding()
+                        .frame(maxWidth: UIScreen.main.bounds.width)
                     }
-                    .padding()
-                    .frame(maxWidth: UIScreen.main.bounds.width)
+
                     Spacer()
                 }
             }
         }
+        .navigationBarHidden(true)
     }
 }
 
