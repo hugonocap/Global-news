@@ -8,63 +8,31 @@
 import SwiftUI
 
 struct BottomTabBarView: View {
-    private var isSelected: Bool = false
     var body: some View {
         VStack {
             
-            HStack(alignment: .bottom, spacing: 40) {
+            HStack(alignment: .bottom) {
+
                 
                 // MARK: All news
-                Button(action: {
-                    
-                }, label: {
-                    VStack(spacing: 4) {
-                        Image(systemName: "newspaper")
-                            .font(.headline)
-                        Text("All News")
-                            .font(.caption)
-                    }
-                    .foregroundColor(isSelected == true ? .blue : .gray)
-                })
+                BottomTabBarButtonView(isSelected: true, icon: "newspaper", text: "All News")
+                    .padding(.leading, 30)
+                
+                Spacer()
                 
                 // MARK: Category
-                Button(action: {
-                    
-                }, label: {
-                    VStack(spacing: 4) {
-                        Image(systemName: "list.bullet")
-                            .font(.headline)
-                        Text("Category")
-                            .font(.caption)
-                    }
-                    .foregroundColor(isSelected == true ? .blue : .gray)
-                })
+                BottomTabBarButtonView(icon: "list.bullet", text: "Category")
+                
+                Spacer()
                 
                 // MARK: Bookmark
-                       Button(action: {
-                           
-                }, label: {
-                    VStack(spacing: 4) {
-                        Image(systemName: "bookmark")
-                            .font(.headline)
-                        Text("Bookmark")
-                            .font(.caption)
-                    }
-                    .foregroundColor(isSelected == true ? .blue : .gray)
-                })
+                BottomTabBarButtonView(icon: "bookmark", text: "Bookmark")
+                
+                Spacer()
                               
                 // MARK: Profile
-                Button(action: {
-                                  
-                }, label: {
-                    VStack(spacing: 4) {
-                        Image(systemName: "person.fill")
-                            .font(.headline)
-                        Text("Profile")
-                            .font(.caption)
-                    }
-                    .foregroundColor(isSelected == true ? .blue : .gray)
-                })
+                BottomTabBarButtonView(icon: "person.fill", text: "Profile")
+                    .padding(.trailing, 30)
             }
             .fontWeight(.bold)
             .padding(.bottom)
@@ -81,5 +49,25 @@ struct BottomTabBarView: View {
 struct BottomTabBarView_Previews: PreviewProvider {
     static var previews: some View {
         BottomTabBarView()
+    }
+}
+
+struct BottomTabBarButtonView: View {
+    var isSelected: Bool = false
+    var icon: String
+    var text: String
+    var body: some View {
+        Button(action: {
+            
+        }, label: {
+            VStack(spacing: 4) {
+                Image(systemName: icon)
+                    .font(.headline)
+                Text(text)
+                    .font(.caption)
+            }
+            .foregroundColor(isSelected == true ? .blue : .gray)
+        })
+        .shadow(color: isSelected == true ? .gray : .white.opacity(0), radius: 4)
     }
 }
