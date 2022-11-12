@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct TrendingTopicsItem: View {
+    var newsComponent: TrendingNews
     var body: some View {
         ZStack {
-            Image("indonesia-nature")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 360, height: 200)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                .clipped()
+            TrendingBackgroundView(image: newsComponent.image)
             
             // MARK: Blur
             RoundedRectangle(cornerRadius: 12)
@@ -39,27 +35,13 @@ struct TrendingTopicsItem: View {
                 // MARK: Content
                 VStack(alignment: .leading, spacing: 10) {
                     // MARK: Category icon
-                    Text("Travel")
-                        .padding(.vertical, 4)
-                        .padding(.horizontal, 10)
-                        .fontWeight(.bold)
-                        .font(.caption)
-                        .background(Color(.systemOrange))
-                        .foregroundColor(.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 4))
+                    TrendingCategoryView(category: newsComponent.category)
                     
                     // MARK: Title
-                    Text("5 tourist attractions that you must visit while in Indonesia")
-                        .foregroundColor(.white)
-                        .font(.subheadline)
+                    TrendingTitleView(title: newsComponent.title)
                     
                     // MARK: Author
-                    HStack {
-                        Image(systemName: "pencil")
-                        Text("Hugo Montana")
-                    }
-                    .foregroundColor(Color(.systemGray2))
-                    .font(.caption)
+                    TrendingAuthorView(author: newsComponent.author)
                 }
             }
             .padding()
@@ -70,8 +52,61 @@ struct TrendingTopicsItem: View {
 
 struct TrendingTopicsItem_Previews: PreviewProvider {
     static var previews: some View {
-        TrendingTopicsItem()
+        TrendingTopicsItem(newsComponent: TrendingNews(image: "meta-lay-off",
+                                                       title: "Meta lay Off",
+                                                       category: "Travel",
+                                                       author: "Hugo Montana",
+                                                       content: "nothing",
+                                                       uploadTime: "00:00",
+                                                       numberOfComments: 0))
             .padding()
     }
 }
 
+
+struct TrendingBackgroundView: View {
+    var image: String
+    var body: some View {
+        Image(image)
+            .resizable()
+            .scaledToFill()
+            .frame(width: 360, height: 200)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .clipped()
+    }
+}
+
+struct TrendingCategoryView: View {
+    var category: String
+    var body: some View {
+        Text(category)
+            .padding(.vertical, 4)
+            .padding(.horizontal, 10)
+            .fontWeight(.bold)
+            .font(.caption)
+            .background(Color(.systemOrange))
+            .foregroundColor(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 4))
+    }
+}
+
+struct TrendingTitleView: View {
+    var title: String
+    var body: some View {
+        Text(title)
+            .foregroundColor(.white)
+            .font(.subheadline)
+    }
+}
+
+struct TrendingAuthorView: View {
+    var author: String
+    var body: some View {
+        HStack {
+            Image(systemName: "pencil")
+            Text(author)
+        }
+        .foregroundColor(Color(.systemGray2))
+        .font(.caption)
+    }
+}
