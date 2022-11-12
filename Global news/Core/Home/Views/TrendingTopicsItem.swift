@@ -17,7 +17,7 @@ struct TrendingTopicsItem: View {
             RoundedRectangle(cornerRadius: 12)
                 .frame(width: 360, height: 200)
                 .background(.thinMaterial)
-                .opacity(0.25)
+                .opacity(0.40)
             
             VStack(alignment: .leading) {
                 // MARK: Header icons
@@ -106,7 +106,10 @@ struct TrendingAuthorView: View {
             Image(systemName: "pencil")
             Text(author)
         }
-        .foregroundColor(Color(.systemGray2))
+        .padding(2)
+        .foregroundColor(Color(.systemGray3))
         .font(.caption)
+        .background(.black.opacity(0.15))
+        .cornerRadius(3)
     }
 }
