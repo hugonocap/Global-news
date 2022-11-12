@@ -10,7 +10,7 @@ import SwiftUI
 struct TrendingTopicsView: View {
     var news: [TrendingNews] = TrendingCarousel.allNews
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0) {
             Text("Trending Topics")
                 .font(.title2)
                 .fontWeight(.bold)

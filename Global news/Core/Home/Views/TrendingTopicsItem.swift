@@ -14,10 +14,11 @@ struct TrendingTopicsItem: View {
             TrendingBackgroundView(image: newsComponent.image)
             
             // MARK: Blur
-            RoundedRectangle(cornerRadius: 12)
-                .frame(width: 360, height: 200)
+            Rectangle()
                 .background(.thinMaterial)
+                .frame(width: 360, height: 200)
                 .opacity(0.40)
+                .cornerRadius(12)
             
             VStack(alignment: .leading) {
                 // MARK: Header icons

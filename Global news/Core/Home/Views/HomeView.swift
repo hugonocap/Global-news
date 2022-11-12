@@ -11,7 +11,7 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             VStack {
-                ScrollView {
+                ScrollView(showsIndicators: false) {
                     VStack {
                         HeaderView()
                         TrendingTopicsView()
@@ -21,6 +21,8 @@ struct HomeView: View {
                     .padding(.horizontal)
                     }
                     .edgesIgnoringSafeArea(.top)
+                
+                BottomTabBarView()
                     
                 
                 Spacer()

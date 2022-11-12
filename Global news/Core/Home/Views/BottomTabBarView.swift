@@ -12,8 +12,6 @@ struct BottomTabBarView: View {
     var body: some View {
         VStack {
             
-            Spacer()
-            
             HStack(alignment: .bottom, spacing: 40) {
                 
                 // MARK: All news
@@ -69,14 +67,14 @@ struct BottomTabBarView: View {
                 })
             }
             .fontWeight(.bold)
-            .padding(.bottom, 30)
+            .padding(.bottom)
             .clipShape(Rectangle())
             .foregroundColor(.white)
             .frame(maxWidth: .infinity)
-            .frame(height: 100)
+            .frame(height: 70)
             .clipped()
         }
-        .ignoresSafeArea()
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
