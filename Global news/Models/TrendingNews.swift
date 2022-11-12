@@ -21,7 +21,7 @@ struct TrendingNews {
 struct TrendingCarousel {
     static let allNews = [
         // MARK: 5 tourist attractions that you must visit while in Indonesia
-        TrendingNews(image: "5-tourist-attractions-in",
+        TrendingNews(image: "indonesia-nature",
                      title: "5 tourist attractions that you must visit while in Indonesia",
                      category: "Travel",
                      author: "Achmad Alimin",

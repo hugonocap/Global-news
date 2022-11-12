@@ -17,11 +17,11 @@ struct TrendingTopicsView: View {
                 .foregroundColor(.gray)
             
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 20) {
-                    ForEach(news, id: \.id) { item in
-                        TrendingTopicsItem(newsComponent: item)
-                    }
-                    .frame(height: 250)
+                HStack(spacing: 50) {
+//                    ForEach(news, id: \.id) { item in
+//                        TrendingTopicsItem(newsComponent: item)
+//                    }
+//                    .frame(height: 250)
                 }
                 .padding(.leading)
             }
