@@ -21,6 +21,7 @@
 		D9D84DE0291C54840008EA3E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D84DDF291C54840008EA3E /* HeaderView.swift */; };
 		D9D84DE4291C593E0008EA3E /* TrendingTopicsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D84DE3291C593E0008EA3E /* TrendingTopicsItem.swift */; };
 		D9D84DE6291C62190008EA3E /* TrendingTopicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D84DE5291C62190008EA3E /* TrendingTopicsView.swift */; };
+		D9F9D10C29202D31006EA383 /* NewsDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9D10B29202D31006EA383 /* NewsDetailedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D9D84DDF291C54840008EA3E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D9D84DE3291C593E0008EA3E /* TrendingTopicsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTopicsItem.swift; sourceTree = "<group>"; };
 		D9D84DE5291C62190008EA3E /* TrendingTopicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTopicsView.swift; sourceTree = "<group>"; };
+		D9F9D10B29202D31006EA383 /* NewsDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +142,9 @@
 				D91DA6A2291CE1D40082921D /* CategoriesView.swift */,
 				D91DA6A4291CE9700082921D /* NewsListItemView.swift */,
 				D98FF4EF291D8F6B00937607 /* NewsListView.swift */,
-				D9D84DDE291C52320008EA3E /* ViewModels */,
 				D95086CA291FD4FE00F907FD /* BottomTabBarView.swift */,
+				D9D84DDE291C52320008EA3E /* ViewModels */,
+				D9F9D10B29202D31006EA383 /* NewsDetailedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9D84DE4291C593E0008EA3E /* TrendingTopicsItem.swift in Sources */,
+				D9F9D10C29202D31006EA383 /* NewsDetailedView.swift in Sources */,
 				D901063C291EE1D8004B18A1 /* TrendingNews.swift in Sources */,
 				D91DA6A3291CE1D40082921D /* CategoriesView.swift in Sources */,
 				D9D84DE6291C62190008EA3E /* TrendingTopicsView.swift in Sources */,
