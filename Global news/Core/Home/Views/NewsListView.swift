@@ -12,7 +12,7 @@ struct NewsListView: View {
     var body: some View {
             VStack(spacing: 20) {
                 ForEach(news, id: \.id) { news in
-                    NavigationLink(destination: NewsDetailedView()) {
+                    NavigationLink(destination: NewsDetailedView(newsComponent: news)) {
                         NewsListItemView(newsComponent: news)
                     }
             }

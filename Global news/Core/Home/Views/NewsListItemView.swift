@@ -102,6 +102,7 @@ struct TitleView: View {
             .font(.system(size: 14))
             .lineLimit(2)
             .foregroundColor(.gray)
+            .multilineTextAlignment(.leading)
     }
 }
 

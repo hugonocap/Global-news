@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NewsDetailedView: View {
     @Environment(\.presentationMode) var presentationMode
+    var newsComponent: News
     var body: some View {
         VStack {
             ZStack {
@@ -16,9 +17,7 @@ struct NewsDetailedView: View {
                 ScrollView {
                     ZStack {
                         // MARK: Background
-                        Image("indonesia-nature")
-                            .resizable()
-                            .scaledToFill()
+                        DetailedBackgroundView(image: newsComponent.image)
                             
                         // MARK: Blur
                         Rectangle()
@@ -36,40 +35,22 @@ struct NewsDetailedView: View {
                     VStack(alignment: .leading) {
                         // MARK: Category & time
                         HStack {
-                            Text("Travel")
-                                .padding(.vertical, 4)
-                                .padding(.horizontal, 10)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .background(Color(.systemOrange))
-                                .cornerRadius(4)
+                            DetailedCategoryView(category: newsComponent.category)
                             Spacer()
-                            HStack {
-                                Image(systemName: "clock")
-                                Text("15:34")
-                            }
-                            .fontWeight(.light)
-                            .foregroundColor(.gray)
+                            DetailedTimeView(time: newsComponent.uploadTime)
                         }
                         .font(.caption)
                         
                         VStack(alignment: .leading, spacing: 12) {
-                            Text("5 tourist attractions that you must visit while in Indonesia")
-                                .fontWeight(.bold)
-                                .foregroundColor(Color("AppFont"))
+                            DetailedTitleView(title: newsComponent.title)
                             
                             HStack {
-                                HStack {
-                                    Image(systemName: "pencil")
-                                    Text("Achmad Alimin")
-                                }
+                                // MARK: Author
+                                DetailedAuthorView(author: newsComponent.author)
                                 
                                 Spacer()
-                                
-                                HStack(alignment: .bottom) {
-                                    Image(systemName: "bubble.right.fill")
-                                    Text("23")
-                                }
+                                // MARK: Comments
+                                DetailedCommentsView(comments: newsComponent.numberOfComments)
                                 
                                 Image(systemName: "square.and.arrow.up.fill")
                             }
@@ -79,10 +60,8 @@ struct NewsDetailedView: View {
                         
                         Divider()
                             .padding(.bottom)
-                        
-                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
-                            .font(.subheadline)
-                            .foregroundColor(Color("AppFont"))
+                        // MARK: Content text
+                        DetailedContentView(content: newsComponent.content)
                         
                     }
                     .padding()
@@ -114,8 +93,86 @@ struct NewsDetailedView: View {
     }
 }
 
-struct NewsDetailedView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsDetailedView()
+//struct NewsDetailedView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewsDetailedView(newsComponent: TrendingNews(image: "indonesia-nature",
+//                                                     title: "title",
+//                                                     category: "Category",
+//                                                     author: "Author",
+//                                                     content: "Content",
+//                                                     uploadTime: "0:00",
+//                                                     numberOfComments: 00))
+//    }
+//}
+
+struct DetailedBackgroundView: View {
+    var image: String
+    var body: some View {
+        Image(image)
+            .resizable()
+            .scaledToFill()
+    }
+}
+
+struct DetailedCategoryView: View {
+    var category: String
+    var body: some View {
+        Text(category)
+            .padding(.vertical, 4)
+            .padding(.horizontal, 10)
+            .fontWeight(.bold)
+            .foregroundColor(.white)
+            .background(Color(.systemOrange))
+            .cornerRadius(4)
+    }
+}
+
+struct DetailedTimeView: View {
+    var time: String
+    var body: some View {
+        HStack {
+            Image(systemName: "clock")
+            Text(time)
+        }
+        .fontWeight(.light)
+        .foregroundColor(.gray)
+    }
+}
+
+struct DetailedTitleView: View {
+    var title: String
+    var body: some View {
+        Text(title)
+            .fontWeight(.bold)
+            .foregroundColor(Color("AppFont"))
+    }
+}
+
+struct DetailedAuthorView: View {
+    var author: String
+    var body: some View {
+        HStack {
+            Image(systemName: "pencil")
+            Text(author)
+        }
+    }
+}
+
+struct DetailedCommentsView: View {
+    var comments: Int
+    var body: some View {
+        HStack(alignment: .bottom) {
+            Image(systemName: "bubble.right.fill")
+            Text("\(comments)")
+        }
+    }
+}
+
+struct DetailedContentView: View {
+    var content: String
+    var body: some View {
+        Text(content)
+            .font(.subheadline)
+            .foregroundColor(Color("AppFont"))
     }
 }
