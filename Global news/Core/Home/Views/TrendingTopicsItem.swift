@@ -13,13 +13,6 @@ struct TrendingTopicsItem: View {
         ZStack {
             TrendingBackgroundView(image: newsComponent.image)
             
-            // MARK: Blur
-            Rectangle()
-                .background(.thinMaterial)
-                .frame(width: 360, height: 200)
-                .opacity(0.40)
-                .cornerRadius(12)
-            
             VStack(alignment: .leading) {
                 // MARK: Header icons
                 HStack(alignment: .bottom) {
@@ -73,6 +66,7 @@ struct TrendingBackgroundView: View {
             .scaledToFill()
             .frame(width: 360, height: 200)
             .clipShape(RoundedRectangle(cornerRadius: 12))
+            .brightness(-0.025)
             .clipped()
     }
 }
@@ -110,7 +104,7 @@ struct TrendingAuthorView: View {
         .padding(2)
         .foregroundColor(Color(.systemGray3))
         .font(.caption)
-        .background(.black.opacity(0.15))
+        .background(.black.opacity(0.45))
         .cornerRadius(3)
     }
 }

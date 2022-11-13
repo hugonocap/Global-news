@@ -18,8 +18,10 @@ struct TrendingTopicsView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
-                    ForEach(news, id: \.id) { item in
-                        TrendingTopicsItem(newsComponent: item)
+                    ForEach(news, id: \.id) { news in
+                        NavigationLink(destination: TrendingNewsDetailedView(newsComponent: news)) {
+                            TrendingTopicsItem(newsComponent: news)
+                        }
                     }
                     .frame(height: 250)
                 }
