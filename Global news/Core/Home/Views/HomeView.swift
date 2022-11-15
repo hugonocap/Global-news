@@ -11,6 +11,10 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                
+                Color("AppBackground")
+                    .ignoresSafeArea()
+                
                 VStack {
                     ScrollView(showsIndicators: false) {
                         VStack {

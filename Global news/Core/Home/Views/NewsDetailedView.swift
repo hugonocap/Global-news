@@ -14,6 +14,9 @@ struct NewsDetailedView: View {
         VStack {
             ZStack {
                 
+                Color("AppBackground")
+                    .ignoresSafeArea()
+                
                 ScrollView {
                     ZStack {
                         // MARK: Background

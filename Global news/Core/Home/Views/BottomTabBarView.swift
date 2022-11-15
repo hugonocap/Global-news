@@ -68,6 +68,5 @@ struct BottomTabBarButtonView: View {
             }
             .foregroundColor(isSelected == true ? .blue : .gray)
         })
-        .shadow(color: isSelected == true ? .gray : .white.opacity(0), radius: 4)
     }
 }

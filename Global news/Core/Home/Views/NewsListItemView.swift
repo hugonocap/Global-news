@@ -11,7 +11,7 @@ struct NewsListItemView: View {
     var newsComponent: News
     var body: some View {
         ZStack {
-            Color(.white)
+            Color("AppBackground")
             
             HStack {
                 ImageView(image: newsComponent.image)
